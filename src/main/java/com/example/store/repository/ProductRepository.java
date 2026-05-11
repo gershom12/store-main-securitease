@@ -1,6 +1,7 @@
 package com.example.store.repository;
 
 import com.example.store.entity.Product;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,7 +18,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     """)
     List<Product> findAllWithOrders();
 
-    @Query("""
+    @Query(
+            """
         SELECT DISTINCT p
         FROM Product p
         LEFT JOIN FETCH p.orders

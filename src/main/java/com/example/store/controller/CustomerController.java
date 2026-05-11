@@ -3,8 +3,11 @@ package com.example.store.controller;
 import com.example.store.dto.CreateCustomerRequest;
 import com.example.store.dto.CustomerDTO;
 import com.example.store.service.CustomerService;
+
 import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

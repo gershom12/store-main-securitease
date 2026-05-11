@@ -9,7 +9,8 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-    @Query("""
+    @Query(
+            """
         SELECT DISTINCT c
         FROM Customer c
         LEFT JOIN FETCH c.orders
